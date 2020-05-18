@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.0",
-        "kreait/firebase-php": "^5.2",
+        "kreait/firebase-php": "^5.2"
     },
     "require-dev": {
     },
