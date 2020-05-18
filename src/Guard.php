@@ -1,23 +1,23 @@
 <?php
 namespace csrui\LaravelFirebaseAuth;
 
-use Firebase\Auth\Token\Verifier;
+use Kreait\Firebase\Auth;
 
 class Guard
 {
 
-    protected $verifier;
+    protected $auth;
 
-    public function __construct(Verifier $verifier)
+    public function __construct(Auth $auth)
     {
-        $this->verifier = $verifier;
+        $this->auth = $auth;
     }
     
     public function user($request)
     {
         $token = $request->bearerToken();
         try {
-            $token = $this->verifier->verifyIdToken($token);
+            $token = $this->auth->verifyIdToken($token);
             return new User($token->getClaims());
         }
         catch (\Exception $e) {
