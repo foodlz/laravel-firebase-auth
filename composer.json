@@ -1,5 +1,5 @@
 {
-    "name": "csrui/laravel-firebase-auth",
+    "name": "sdwru/laravel-firebase-auth",
     "description": "Secure your laravel API with Google Firebase Auth",
     "license": "MIT",
     "type": "library",
