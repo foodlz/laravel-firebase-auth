@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.0",
-        "kreait/laravel-firebase": "^5.0",
+        "kreait/laravel-firebase": "^2.0",
         "illuminate/contracts": "^5.8|^6.0|^7.0",
         "illuminate/support": "^5.8|^6.0|^7.0"
         
