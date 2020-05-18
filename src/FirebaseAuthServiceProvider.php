@@ -3,7 +3,7 @@
 namespace csrui\LaravelFirebaseAuth;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Firebase\Auth\Token\Verifier;
+use Kreait\Firebase\Auth;;
 
 class FirebaseAuthServiceProvider extends BaseServiceProvider {
 
@@ -27,7 +27,7 @@ class FirebaseAuthServiceProvider extends BaseServiceProvider {
   public function register()
   {
     $this->app->singleton(Verifier::class, function ($app) {
-      return new Verifier(config('firebase.project_id'));
+      return new Auth(config('firebase.project_id'));
     });
   }
 
