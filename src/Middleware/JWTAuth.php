@@ -3,7 +3,7 @@
 namespace csrui\LaravelFirebaseAuth\Middleware;
 
 use Closure;
-use Firebase\Auth\Token\Verifier;
+use Kreait\Firebase\Auth;
 
 class JWTAuth
 {
@@ -47,10 +47,10 @@ class JWTAuth
             throw new \Exception('Missing FIREBASE_PROJECT_ID', 1);
         }
 
-        $verifier = new Verifier($project_id);
+        $auth = new Auth($project_id);
 
         try {
-            $verifiedIdToken = $verifier->verifyIdToken($token);
+            $verifiedIdToken = $auth->verifyIdToken($token);
             return true;
         } catch (\Firebase\Auth\Token\Exception\UnknownKey $e) {
             return response()->json($e->getMessage(), 401);
