@@ -39,15 +39,7 @@ class JWTAuth
     public function retrieveAndValidateToken($token)
     {
 
-        // TODO: Check the sintax on the config retreival
-        $project_id = config('firebase.project_id');
-
-        if (empty($project_id)) 
-        {
-            throw new \Exception('Missing FIREBASE_PROJECT_ID', 1);
-        }
-
-        $auth = new Auth($project_id);
+        $auth = new Auth();
 
         try {
             $verifiedIdToken = $auth->verifyIdToken($token);
