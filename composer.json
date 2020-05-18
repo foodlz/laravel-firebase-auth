@@ -28,12 +28,5 @@
         "psr-4": {
             "csrui\\LaravelFirebaseAuth\\Test\\": "tests/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "csrui\\LaravelFirebaseAuth\\FirebaseAuthServiceProvider"
-            ]
-        }
     }
 }
