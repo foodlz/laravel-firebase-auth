@@ -79,7 +79,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     //return true;
 });
 
-Route::middleware('auth:api')->apiResource('endpoint', 'API\EndpointController');
+Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
 ## Support
 
