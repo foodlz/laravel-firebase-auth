@@ -95,7 +95,7 @@ class UserController extends Controller
     public function index(Request $request, Guard $guard)
     {
         $user = $guard->user();
-        print_r($user->getAuthIdentifier());
+        echo $user->getAuthIdentifier();
     }
 }
 ```
