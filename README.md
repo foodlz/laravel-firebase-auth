@@ -45,7 +45,7 @@ $this->app['auth']->viaRequest('firebase', function ($request) {
 });
 ```
 
-Now on you auth.php configure your API guard driver to 'firebase'.
+On `config/auth.php` set your api guard driver to 'firebase'.
 
 ```php
     'guards' => [
