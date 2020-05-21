@@ -96,6 +96,8 @@ class UserController extends Controller
     public function index(Request $request, Guard $guard)
     {
         // Do something with the request
+        
+        //Retrieve Firebase uid from IdToken
         $user = $guard->user();
         echo $user->getAuthIdentifier();
     }
