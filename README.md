@@ -82,7 +82,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
 ### Use it
-Get, for example, user object in controller.
+For example
+
 ```php
 <?php
 namespace App\Http\Controllers\API;
@@ -94,6 +95,7 @@ class UserController extends Controller
 {
     public function index(Request $request, Guard $guard)
     {
+        // Do something with the request
         $user = $guard->user();
         echo $user->getAuthIdentifier();
     }
