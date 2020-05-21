@@ -48,11 +48,28 @@ $this->app['auth']->viaRequest('firebase', function ($request) {
 Now on you auth.php configure you Guard driver to 'firebase'.
 
 ```php
-'providers' => [
-    'users' => [
-        'driver' => 'firebase',
-        'model' => \csrui\LaravelFirebaseAuth\User::class,
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'firebase',
+            'provider' => 'firebase',
+        ],
     ],
+    
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+
+        'firebase' => [
+            'driver' => 'firebase',
+            'model' => \csrui\LaravelFirebaseAuth\User::class,
+        ],
 ],
 ```
 
