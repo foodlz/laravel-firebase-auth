@@ -2,6 +2,7 @@
 namespace csrui\LaravelFirebaseAuth;
 
 use Kreait\Firebase\Auth;
+use Firebase\Auth\Token\Exception\InvalidToken;
 
 class Guard
 {
@@ -17,11 +18,15 @@ class Guard
     {
         $token = $request->bearerToken();
         try {
+            
             $token = $this->auth->verifyIdToken($token);
             return new User($token->getClaims());
-        }
-        catch (\Exception $e) {
-            return;
+ 
+        } catch (\InvalidArgumentException $e) {
+            echo 'The token could not be parsed: ' . $e->getMessage();
+ 
+        } catch (InvalidToken $e) {
+            echo 'The token is invalid: ' . $e->getMessage();
         }
     }
 }
