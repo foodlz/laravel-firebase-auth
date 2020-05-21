@@ -72,7 +72,7 @@ Now on you auth.php configure your API guard driver to 'firebase'.
         ],
 ],
 ```
-Add authentication to api routes in `/routes/api.php`.
+Add authentication to api routes in `/routes/api.php`. This is assuming you are using method 2 as explained above.
 ```php
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
