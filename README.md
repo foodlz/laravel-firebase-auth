@@ -13,9 +13,7 @@ Add the following to your `composer.json`.
         {"type": "git", "url": "https://github.com/sdwru/laravel-firebase-auth.git"}
 ]
 ```
-```
-composer update
-```
+`composer update`
 #### firebase-php
 Publish the the firebase-php admin SDK package config.
 
