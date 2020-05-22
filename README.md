@@ -90,8 +90,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
-### Use it
-For example
+### Retrieve uid
 
 ```php
 <?php
