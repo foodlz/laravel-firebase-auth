@@ -33,12 +33,6 @@ Add the *Middleware* on your *Kernel.php* file.
 
 ### 2. Lock access and identify the client requester
 
-Add the Service Provider to your config/app.php
-
-```php
-sdwru\LaravelFirebaseAuth\FirebaseAuthServiceProvider::class,
-```
-
 Register the Guard in app/Providers/AuthServiceProvider.php in the `boot` method.
 
 ```php
