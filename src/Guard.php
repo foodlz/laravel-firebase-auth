@@ -23,7 +23,8 @@ class Guard
             return new User($token->getClaims());
  
         } catch (\InvalidArgumentException $e) {
-            echo 'The token could not be parsed: ' . $e->getMessage();
+            echo $e->getMessage();
+            echo '<br>';
  
         } catch (InvalidToken $e) {
             echo 'The token is invalid: ' . $e->getMessage();
