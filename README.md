@@ -37,7 +37,7 @@ There are two ways to use this.
 Add the *Middleware* on your *Kernel.php* file.
 
 ```php
-\csrui\LaravelFirebaseAuth\Middleware\JWTAuth::class,
+\sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
 ```
 
 ### 2. Lock access and identify the client requester
@@ -45,14 +45,14 @@ Add the *Middleware* on your *Kernel.php* file.
 Add the Service Provider to your config/app.php
 
 ```php
-csrui\LaravelFirebaseAuth\FirebaseAuthServiceProvider::class,
+sdwru\LaravelFirebaseAuth\FirebaseAuthServiceProvider::class,
 ```
 
 Register the Guard in AuthServiceProvider.php in the `boot` method.
 
 ```php
 $this->app['auth']->viaRequest('firebase', function ($request) {
-    return app(\csrui\LaravelFirebaseAuth\Guard::class)->user($request);
+    return app(\sdwru\LaravelFirebaseAuth\Guard::class)->user($request);
 });
 ```
 
@@ -79,7 +79,7 @@ On `config/auth.php` set your api guard driver to 'firebase'.
 
         'firebase' => [
             'driver' => 'firebase',
-            'model' => \csrui\LaravelFirebaseAuth\User::class,
+            'model' => \sdwru\LaravelFirebaseAuth\User::class,
         ],
 ],
 ```
