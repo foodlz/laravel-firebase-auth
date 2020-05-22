@@ -1,6 +1,6 @@
 <?php
 
-namespace csrui\LaravelFirebaseAuth\Middleware;
+namespace sdwru\LaravelFirebaseAuth\Middleware;
 
 use Closure;
 use Kreait\Firebase\Auth;
