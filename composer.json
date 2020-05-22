@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "csrui\\LaravelFirebaseAuth\\": "src/"
+            "sdwru\\LaravelFirebaseAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "csrui\\LaravelFirebaseAuth\\Test\\": "tests/"
+            "sdwru\\LaravelFirebaseAuth\\Test\\": "tests/"
         }
     }
 }
