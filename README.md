@@ -21,7 +21,7 @@ Publish the the firebase-php admin SDK package config.
 php artisan vendor:publish
 ```
 
-Configure firebase-php admin SDK [according to their instructions](https://firebase-php.readthedocs.io/en/stable/setup.html#google-service-account) if you have not already done so.  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app) somewhere, such as your root laravel directory, and adding a reference to that file in your .env
+Configure firebase-php admin SDK [according to their instructions](https://firebase-php.readthedocs.io/en/stable/setup.html#google-service-account).  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app) somewhere, such as your root laravel directory, and adding a reference to that file in your .env
 ```bash
 FIREBASE_CREDENTIALS=myproject-firebase-adminsdk.json
 ```
