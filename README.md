@@ -3,6 +3,8 @@ Secure your laravel API with Google Firebase Auth
 
 Adding the *Middleware* to your API will ensure that access is granted only using a valid Bearer Token issues by Goggle Firebase Auth.
 
+The main difference between this package and the package we forked it from is that we are using [laravel-firebase](https://github.com/kreait/laravel-firebase).  Using that package simplifiest this package by removing the need for a service provider.  Since that packaged depends on [firebase-php](https://github.com/kreait/firebase-php), you can use all the features that package provides.
+
 ## Install
 ```bash
 composer require sdwru/laravel-firebase-auth
