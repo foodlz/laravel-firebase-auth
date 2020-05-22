@@ -20,7 +20,10 @@ Publish the package's config.
 php artisan vendor:publish
 ```
 
-This will add a firebase.php config file where you need to add you Firebase **Project ID**.
+Configure firebase-php admin SDK [according to their instructions](https://firebase-php.readthedocs.io/en/stable/setup.html#google-service-account) if you have not already done so.  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app) somewhere, such as your root laravel directory, and adding a reference to that file in your .env
+```bash
+FIREBASE_CREDENTIALS=myproject-firebase-adminsdk.json
+```
 
 ## How to use
 
