@@ -16,8 +16,8 @@ Add the following to your `composer.json`.
 ]
 ```
 and run `composer update`
-#### firebase-php
-Publish the the firebase-php admin SDK package config.
+#### laravel-firebase
+Publish the laravel-firebase package config.
 
 ```bash
 php artisan vendor:publish
