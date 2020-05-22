@@ -1,5 +1,5 @@
 <?php
-namespace csrui\LaravelFirebaseAuth;
+namespace sdwru\LaravelFirebaseAuth;
 
 use Kreait\Firebase\Auth;
 use Firebase\Auth\Token\Exception\InvalidToken;
