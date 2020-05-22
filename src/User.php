@@ -1,6 +1,6 @@
 <?php
 
-namespace csrui\LaravelFirebaseAuth;
+namespace sdwru\LaravelFirebaseAuth;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 
