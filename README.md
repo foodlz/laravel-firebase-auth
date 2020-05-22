@@ -39,7 +39,7 @@ Add the Service Provider to your config/app.php
 sdwru\LaravelFirebaseAuth\FirebaseAuthServiceProvider::class,
 ```
 
-Register the Guard in AuthServiceProvider.php in the `boot` method.
+Register the Guard in app/Providers/AuthServiceProvider.php in the `boot` method.
 
 ```php
 $this->app['auth']->viaRequest('firebase', function ($request) {
