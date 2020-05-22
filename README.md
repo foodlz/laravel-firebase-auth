@@ -14,7 +14,7 @@ Add the following to your `composer.json`.
 ]
 ```
 #### firebase-php
-Publish the the firebase-php admin SDK package's config.
+Publish the the firebase-php admin SDK package config.
 
 ```bash
 php artisan vendor:publish
