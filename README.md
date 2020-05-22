@@ -7,6 +7,8 @@ Adding the *Middleware* to your API will ensure that access is granted only usin
 Add the following to your `composer.json`.
 ```json
 "require: {
+    "kreait/firebase-php": "^5.2",
+    "kreait/laravel-firebase": "^2.0",
     "sdwru/laravel-firebase-auth": "dev-master"
 },
 "repositories": [
@@ -21,7 +23,7 @@ Publish the the firebase-php admin SDK package config.
 php artisan vendor:publish
 ```
 
-Configure firebase-php admin SDK [according to their instructions](https://firebase-php.readthedocs.io/en/stable/setup.html#google-service-account).  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app), somewhere on your server such as your root laravel directory, and adding a reference to that file in your .env
+Configure laravel-firebase [according to their instructions](https://github.com/kreait/laravel-firebase/blob/master/README.md).  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app), somewhere on your server such as your root laravel directory, and adding a reference to that file in your .env
 ```bash
 FIREBASE_CREDENTIALS=myproject-firebase-adminsdk.json
 ```
