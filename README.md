@@ -104,7 +104,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
-#### Retrieve uid (For method 2 only)
+#### Retrieve uid (For method #2 only)
 
 ```php
 <?php
