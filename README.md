@@ -31,7 +31,7 @@ FIREBASE_CREDENTIALS=myproject-firebase-adminsdk.json
 
 There are two ways to use this.
 
-### 1. Lock access without JWT token
+### Method 1. Lock access without JWT token
 
 Add the *Middleware* on your app/Http/*Kernel.php* file.
 
@@ -65,10 +65,7 @@ Route::middleware('firebase')->get('/user', function (Request $request) {
 
 Route::middleware('firebase')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
-```
-
-
-### 2. Lock access and identify the client requester
+### Method 2. Lock access and identify the client requester
 
 Register the Guard in app/Providers/AuthServiceProvider.php in the `boot` method.
 
