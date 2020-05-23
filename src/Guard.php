@@ -23,11 +23,12 @@ class Guard
             return new User($token->getClaims());
  
         } catch (\InvalidArgumentException $e) {
-            echo $e->getMessage();
-            echo '<br>';
+            //echo $e->getMessage();
+            return;
  
         } catch (InvalidToken $e) {
-            echo 'The token is invalid: ' . $e->getMessage();
+            //echo 'The token is invalid: ' . $e->getMessage();
+            return;
         }
     }
 }
