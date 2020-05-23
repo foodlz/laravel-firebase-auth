@@ -41,20 +41,30 @@ For applying to `api`
     \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
 ],
 ```
-And then to use in routes
-```
+Add authentication to api routes in routes/api.php.
+```php
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
     //return true;
 });
 
-Route::middleware('auth:api')->apiResource('user', 'API\UserController');
-
-For selectively assigning to routes, choose a name (such as `firebase`) and add it to `$routeMiddleware`
+Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
+```
+Or use a custom auth name (such as 'firebase')
 ```php
-'api' => [
-    \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
+prtected '$routeMiddleware' = [
+    'firebase' => \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
 ],
+```
+Then in routes/api.php
+```php
+Route::middleware('firebase')->get('/user', function (Request $request) {
+    return $request->user();
+    //return true;
+});
+
+Route::middleware('firebase')->apiResource('some_endpoint', 'API\SomeEndpointController');
+```
 ```
 
 
