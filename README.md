@@ -39,7 +39,6 @@ Add the *Middleware* on your app/Http/*Kernel.php* file.
 \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
 ```
 Refer to the [Laravel Middleware documentation](https://laravel.com/docs/7.x/middleware) on where you can put this in your Kernel.php file and how it can be used in routes.
-```
 ### Method 2. Lock access and identify the client requester
 
 Register the Guard in app/Providers/AuthServiceProvider.php in the `boot` method.
