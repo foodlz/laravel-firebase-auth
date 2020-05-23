@@ -34,36 +34,12 @@ There are two ways to use this.
 ### Method 1. Lock access without JWT token
 
 Add the *Middleware* on your app/Http/*Kernel.php* file.
-
-For applying to `api` auth 
-```php
-'api' => [
+ 
+```
     \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
 ],
 ```
-And add api authentication in routes/api.php as you normally would.
-```php
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-    //return true;
-});
-
-Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
-```
-Or use a custom auth name (such as `firebase`)
-```php
-prtected '$routeMiddleware' = [
-    'firebase' => \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
-],
-```
-Then in routes/api.php
-```php
-Route::middleware('firebase')->get('/user', function (Request $request) {
-    return $request->user();
-    //return true;
-});
-
-Route::middleware('firebase')->apiResource('some_endpoint', 'API\SomeEndpointController');
+Refer to the [laravel middleware documentation](https://laravel.com/docs/7.x/middleware) on where you can put this in your Kernel.php file and how it can be used in routes.
 ```
 ### Method 2. Lock access and identify the client requester
 
