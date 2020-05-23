@@ -33,7 +33,7 @@ There are two ways to use this.
 
 ### 1. Lock access without JWT token
 
-Add the *Middleware* on your *Kernel.php* file.
+Add the *Middleware* on your app/Http/*Kernel.php* file.
 
 ```php
 \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
