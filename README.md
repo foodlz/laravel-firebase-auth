@@ -35,9 +35,28 @@ There are two ways to use this.
 
 Add the *Middleware* on your app/Http/*Kernel.php* file.
 
+For applying to `api` 
 ```php
-\sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
+'api' => [
+    \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
+],
 ```
+And then to use in routes
+```
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+    //return true;
+});
+
+Route::middleware('auth:api')->apiResource('user', 'API\UserController');
+
+For selectively assigning to routes, choose a name (such as `firebase`) and add it to `$routeMiddleware`
+```php
+'api' => [
+    \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
+],
+```
+
 
 ### 2. Lock access and identify the client requester
 
@@ -85,7 +104,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
-### Retrieve uid
+#### Retrieve uid (For method 2 only)
 
 ```php
 <?php
