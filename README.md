@@ -16,7 +16,7 @@ Publish the laravel-firebase package config if not already done so.
 php artisan vendor:publish
 ```
 
-Configure laravel-firebase [according to their instructions](https://github.com/kreait/laravel-firebase/blob/master/README.md).  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#initialize-sdk).
+Configure laravel-firebase [according to their instructions](https://github.com/kreait/laravel-firebase/blob/master/README.md).  This involves adding the Firebase admin SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#initialize-sdk).
 
 In other words, generate a JSON file as follows:
 
