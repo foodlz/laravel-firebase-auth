@@ -35,13 +35,13 @@ There are two ways to use this.
 
 Add the *Middleware* on your app/Http/*Kernel.php* file.
 
-For applying to `api` 
+For applying to `api` auth 
 ```php
 'api' => [
     \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
 ],
 ```
-Add authentication to api routes in routes/api.php.
+And add api authentication in routes/api.php as you normally would.
 ```php
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
