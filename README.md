@@ -50,7 +50,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
-Or use a custom auth name (such as 'firebase')
+Or use a custom auth name (such as `firebase`)
 ```php
 prtected '$routeMiddleware' = [
     'firebase' => \sdwru\LaravelFirebaseAuth\Middleware\JWTAuth::class,
