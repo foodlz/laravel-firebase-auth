@@ -18,11 +18,11 @@ php artisan vendor:publish
 
 Configure laravel-firebase [according to their instructions](https://github.com/kreait/laravel-firebase/blob/master/README.md).  This involves adding the Firebase SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#initialize-sdk).
 
-So basically, you need to generate a JSON file as follows:
+To summarize, generate a JSON file as follows:
 
 1. In the Firebase console, open Settings > Service Accounts.
 2. Click Generate New Private Key, then confirm by clicking Generate Key.
-3. Securely store the JSON file containing the key somewhere on your server such as your root laravel directory, and add a reference to that file in your .env
+3. Securely store the JSON file containing the key somewhere on your server such as your root laravel directory, and add a reference to that file in your `.env`
 ```bash
 FIREBASE_CREDENTIALS=myproject-firebase-adminsdk.json
 ```
