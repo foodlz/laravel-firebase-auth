@@ -49,7 +49,7 @@ $this->app['auth']->viaRequest('firebase', function ($request) {
 });
 ```
 
-In `config/auth.php` set your api guard driver to `firebase` and the model to firebase User class
+In `config/auth.php` set your api guard driver to `firebase` and the model to `LaravelFirebaseAuth\User::class`
 
 ```php
     'guards' => [
