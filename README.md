@@ -44,9 +44,14 @@ Refer to the [Laravel Middleware documentation](https://laravel.com/docs/7.x/mid
 Add the Guard to app/Providers/AuthServiceProvider.php in the `boot` method.
 
 ```php
-$this->app['auth']->viaRequest('firebase', function ($request) {
-    return app(\sdwru\LaravelFirebaseAuth\Guard::class)->user($request);
-});
+public function boot()
+{
+   $this->registerPolicies();
+
+   $this->app['auth']->viaRequest('firebase', function ($request) {
+       return app(\sdwru\LaravelFirebaseAuth\Guard::class)->user($request);
+   });
+}
 ```
 
 In `config/auth.php` set your api guard driver to `firebase` and the model to `LaravelFirebaseAuth\User::class`
