@@ -10,7 +10,7 @@ The main difference between this package and the package we forked it from is th
 composer require sdwru/laravel-firebase-auth
 ```
 #### laravel-firebase
-Publish the laravel-firebase package config if not already done so.
+Publish the laravel-firebase ServicProvider (`Provider: Kreait\Laravel\Firebase\ServiceProvider`) if not already done so.
 
 ```bash
 php artisan vendor:publish
