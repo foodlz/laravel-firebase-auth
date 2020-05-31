@@ -1,4 +1,6 @@
-namespace App\Http\Middleware;
+<?php
+
+namespace sdwru\LaravelFirebaseAuth\Middleware;
 
 use Closure;
 
