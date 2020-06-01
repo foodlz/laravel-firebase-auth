@@ -5,8 +5,8 @@
     "type": "library",
     "authors": [
         {
-            "name": "Rui Sardinha",
-            "email": "mail@ruisardinha.com"
+            "homepage": "http://github.com/sdwur",
+            "role"    : "Developer"
         }
     ],
     "minimum-stability": "stable",
