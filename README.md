@@ -12,7 +12,7 @@ We have also added role middleware for more fine grained permissions.
 composer require sdwru/laravel-firebase-auth
 ```
 #### laravel-firebase
-Publish the laravel-firebase ServicProvider (`Provider: Kreait\Laravel\Firebase\ServiceProvider`) if not already done so.
+Publish the laravel-firebase ServiceProvider (`Provider: Kreait\Laravel\Firebase\ServiceProvider`) if not already done so.
 
 ```bash
 php artisan vendor:publish
