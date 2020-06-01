@@ -19,8 +19,8 @@ class Guard
         $token = $request->bearerToken();
         try {
             
-            $token = $this->auth->verifyIdToken($token);
-            return new User($token->getClaims());
+            $verifiedToken = $this->auth->verifyIdToken($token);
+            return new User($verifiedToken->getClaims());
  
         } catch (\InvalidArgumentException $e) {
             //echo $e->getMessage();
