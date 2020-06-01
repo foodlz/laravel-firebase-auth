@@ -101,7 +101,7 @@ use Illuminate\Contracts\Auth\Guard;
 
 class UserController extends Controller
 {
-    public function index(Request $request, Guard $guard)
+    public function GetUserAndDoSomething(Request $request, Guard $guard)
     {
         
         // Retrieve Firebase uid from id token via request
