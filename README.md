@@ -121,8 +121,10 @@ class UserController extends Controller
 To use this optional feature add the following to `app/Http/Kernel.php`.
 ```
 protected $routeMiddleware = [
+
 ...
 ...
+
 'role' => \sdwru\LaravelFirebaseAuth\Middleware\RoleMiddleware::class,
 
 ];
