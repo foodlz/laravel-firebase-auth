@@ -181,13 +181,13 @@ class UserController extends Controller
 After assigning roles, add them to routes in `routes/api.php`.
 
 ```php
-//allow any authenticated user with our without role
+//allow any authenticated user
 Route::middleware('auth:api')->apiResource('users', 'API\UserController');
 
-// Allow admin and foo roles
+// Only allow admin and foo roles
 Route::middleware('auth:api', role:admin, foo')->apiResource('users', 'API\OperatorController');
 
-//allow admin role only
+//Allow admin role only
 Route::middleware('auth:api', 'role:admin')->apiResource('users', 'API\AdminController');
 ```
 The firebase-php sdk refers to the property where we assign roles as "attributes". Firebase and JWT refers to them as "claims".  The important thing to understand is they are referring to the the same thing.
