@@ -148,10 +148,6 @@ class UserController extends Controller
    
   public function index(Request $request)
   {
-
-      $user = $request->user();
-      $uid = $user->getAuthIdentifier();
-
       $users = $this->auth->listUsers($defaultMaxResults = 1000, $defaultBatchSize = 1000);
  
       $i = 0;
