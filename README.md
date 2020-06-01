@@ -131,7 +131,7 @@ protected $routeMiddleware = [
 ```
 #### Add role to user example
 ```
-?php
+<?php
 
 namespace App\Http\Controllers\API;
 
