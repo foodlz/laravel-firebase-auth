@@ -121,7 +121,7 @@ class UserController extends Controller
 ```
 ### Role Middleware
 To use this optional feature add the following to `app/Http/Kernel.php`.
-```
+```php
 protected $routeMiddleware = [
 
 ...
@@ -132,7 +132,7 @@ protected $routeMiddleware = [
 ];
 ```
 #### Add role to user example
-```
+```php
 <?php
 
 namespace App\Http\Controllers\API;
@@ -180,7 +180,7 @@ class UserController extends Controller
 ##### Routes
 After assigning roles, add them to routes in `routes/api.php`.
 
-```
+```php
 //allow any authenticated user with our without role
 Route::middleware('auth:api')->apiResource('users', 'API\UserController');
 
