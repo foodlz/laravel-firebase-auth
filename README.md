@@ -110,7 +110,7 @@ class UserController extends Controller
         $user = $request->user();
         $uid = $user->getAuthIdentifier()
         
-        // Or using guard
+        // Or, do the same thing using guard instead
         $user = $guard->user();
         $uid = $user->getAuthIdentifier();
         
