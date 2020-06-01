@@ -82,4 +82,27 @@ class User implements Authenticatable
     {
         throw new \Exception('No remember token for Firebase User');
     }
+    
+    /**
+     * Check role.
+     *
+     * @return bool
+     */
+    public function hasRole($roles)
+    {
+        if (!isset($this->claims['role'])) {
+            return false;
+        }
+
+        $roleClaim = (string) $this->claims['role'];
+
+        foreach ($roles as $role) {
+            //remove white spaces
+            $role = trim($role);
+            if ($roleClaim == $role) {
+                return true;
+            }
+        } 
+        return false;
+    }
 }
