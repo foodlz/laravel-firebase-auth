@@ -185,7 +185,7 @@ After assigning roles, add them to `routes/api.php`.
 Route::middleware('auth:api')->apiResource('users', 'API\UserController');
 
 // Only allow admin and foo roles
-Route::middleware('auth:api', role:admin, foo')->apiResource('users', 'API\OperatorController');
+Route::middleware('auth:api', role:admin, foo')->apiResource('users', 'API\FooController');
 
 //Allow admin role only
 Route::middleware('auth:api', 'role:admin')->apiResource('users', 'API\AdminController');
