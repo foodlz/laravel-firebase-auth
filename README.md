@@ -117,6 +117,84 @@ class UserController extends Controller
     }
 }
 ```
+### Role Middleware
+To use this optional feature add the following to `app/Http/Kernel.php
+```
+protected $routeMiddleware = [
+...
+'role' => \sdwru\LaravelFirebaseAuth\Middleware\RoleMiddleware::class,
+
+];
+```
+#### Add role to user example
+```
+?php
+
+namespace App\Http\Controllers\API;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use \Kreait\Firebase\Auth;
+
+class UserController extends Controller
+{
+  public $auth;
+  
+  public function __construct(Auth $auth)
+  {
+      $this->auth = $auth;
+  }
+   
+  public function index(Request $request)
+  {
+
+      $user = $request->user();
+      $uid = $user->getAuthIdentifier();
+
+      $users = $this->auth->listUsers($defaultMaxResults = 1000, $defaultBatchSize = 1000);
+ 
+      $i = 0;
+      foreach ($users as $k => $v) {
+          $response[$k] = $v;
+      }
+      echo json_encode($response);
+   }
+   
+   public function update(Request $request, $uid)
+   {   
+       $this->validate($request, [
+           'role' => 'required',
+       ]);
+       
+       $customAttributes = [
+         'role' => $request->role,
+       ];
+       
+       $updatedUser = $this->auth->setCustomUserAttributes($uid, $customAttributes);
+       
+       return $this->auth->getUser($uid);
+   }
+}
+```
+After assigning roles, add them to routes in `routes/api.php`.
+
+```
+//allow any authenticated user with our without role
+Route::middleware('auth:api')->apiResource('users', 'API\UserController');
+
+// Allow admin operator and foo
+Route::middleware('auth:api', role:admin, operator, foo')->apiResource('users', 'API\OperatorController');
+
+//allow admin role only
+Route::middleware('auth:api', 'role:admin')->apiResource('users', 'API\AdminController');
+```
+The firebase-php sdk refers to the property where we assign roles as "attributes". Firebase and JWT refers to them as "claims".  The important thing to understand is they are referring to the the same thing.
+https://firebase.google.com/docs/auth/admin/custom-claims
+https://firebase.google.com/docs/firestore/solutions/role-based-access
+https://firebase-php.readthedocs.io/en/5.3.0/user-management.html?highlight=setCustomUserAttributes#update-a-user
+https://www.toptal.com/firebase/role-based-firebase-authentication
+
+
 ## Support
 
 Feel free to open issues and provide feedback.
