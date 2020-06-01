@@ -118,7 +118,7 @@ class UserController extends Controller
 }
 ```
 ### Role Middleware
-To use this optional feature add the following to `app/Http/Kernel.php`
+To use this optional feature add the following to `app/Http/Kernel.php`.
 ```
 protected $routeMiddleware = [
 ...
