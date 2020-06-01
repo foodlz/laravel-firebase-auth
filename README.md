@@ -192,8 +192,11 @@ Route::middleware('auth:api', 'role:admin')->apiResource('users', 'API\AdminCont
 ```
 The firebase-php sdk refers to the property where we assign roles as "attributes". Firebase and JWT refers to them as "claims".  The important thing to understand is they are referring to the the same thing.
 https://firebase.google.com/docs/auth/admin/custom-claims
+
 https://firebase.google.com/docs/firestore/solutions/role-based-access
+
 https://firebase-php.readthedocs.io/en/5.3.0/user-management.html?highlight=setCustomUserAttributes#update-a-user
+
 https://www.toptal.com/firebase/role-based-firebase-authentication
 
 
