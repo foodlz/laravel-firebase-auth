@@ -5,6 +5,8 @@ Adding the *Middleware* to your API will ensure that access is granted only usin
 
 The main difference between this package and the package we forked it from is that we are using [laravel-firebase](https://github.com/kreait/laravel-firebase) as a dependency which in turn depends on [firebase-php](https://github.com/kreait/firebase-php).  Using that package instead of firebase-tokens (which is already included in firebase-php) simplifiest this package by removing the need for a service provider.  Since that package depends on [firebase-php](https://github.com/kreait/firebase-php), you can use [all the features that package provides](https://github.com/kreait/firebase-php#documentation).
 
+We have also added role middleware for more fine grained permissions.
+
 ## Install
 ```bash
 composer require sdwru/laravel-firebase-auth
