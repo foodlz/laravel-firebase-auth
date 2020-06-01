@@ -175,6 +175,7 @@ class UserController extends Controller
    }
 }
 ```
+##### Routes
 After assigning roles, add them to routes in `routes/api.php`.
 
 ```
