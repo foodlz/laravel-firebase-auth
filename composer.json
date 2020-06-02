@@ -5,7 +5,7 @@
     "type": "library",
     "authors": [
         {
-            "name": "sdwru"
+            "name": "sdwru",
             "homepage": "http://github.com/sdwur",
             "role"    : "Developer"
         }
