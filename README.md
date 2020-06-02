@@ -19,9 +19,9 @@ Publish the laravel-firebase ServiceProvider (`Provider: Kreait\Laravel\Firebase
 php artisan vendor:publish
 ```
 
-Configure laravel-firebase [according to their instructions](https://github.com/kreait/laravel-firebase/blob/master/README.md).  This involves adding the Firebase admin SDK `package.json` file, [as explained here](https://firebase.google.com/docs/admin/setup#initialize-sdk).
+Configure laravel-firebase [according to their instructions](https://github.com/kreait/laravel-firebase/blob/master/README.md) and also explained in the official firebase documentation [at this link](https://firebase.google.com/docs/admin/setup#initialize-sdk).
 
-In other words, generate a JSON file as follows:
+Those instructions make it sound more complicated than it is.  All we need to do is generate a JSON file as follows:
 
 1. In the Firebase console, open Settings > Service Accounts.
 2. Click Generate New Private Key, then confirm by clicking Generate Key.
