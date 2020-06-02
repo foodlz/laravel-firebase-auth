@@ -163,7 +163,7 @@ class UserController extends Controller
    public function update(Request $request, $uid)
    {   
        $this->validate($request, [
-           'role' => 'required',
+           'role' => 'present|string|max:20',
        ]);
        
        $customAttributes = [
