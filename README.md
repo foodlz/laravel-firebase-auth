@@ -133,7 +133,7 @@ protected $routeMiddleware = [
 ];
 ```
 #### Add role to user example
-Please note, the client needs to be issued a new token for the new role to take effect. This can happen in one of 3 ways.  The user signs in or re-authenticates, the user session gets it's ID token refreshed after an older token expires, and ID token is force refreshed by calling `currentUser.getIdToken(true)` on the user end in Javascript/Vue.
+Please note, the client needs to be issued a new token for the new role to take effect. This can happen in one of 3 ways [according to the documentation](https://firebase.google.com/docs/auth/admin/custom-claims#propagate_custom_claims_to_the_client).  The user signs in or re-authenticates, the user session gets it's ID token refreshed after an older token expires, and ID token is force refreshed by calling `currentUser.getIdToken(true)` on the user end in Javascript/Vue.
 ```php
 <?php
 
