@@ -1,5 +1,6 @@
 # laravel-firebase-auth-plus
 https://packagist.org/packages/sdwru/laravel-firebase-auth-plus
+
 Secure your laravel API with Google Firebase Auth
 
 Adding the *Middleware* to your API will ensure that access is granted only using a valid Bearer Token issues by Goggle Firebase Auth.
