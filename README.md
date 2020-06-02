@@ -1,5 +1,5 @@
 # laravel-firebase-auth-plus
-https://packagist.org/packages/sdwru/laravel-firebase-auth-plus
+[![Current version](https://img.shields.io/packagist/v/sdwru/laravel-firebase-auth-plus.svg)](https://packagist.org/packages/sdwru/laravel-firebase-auth-plus)
 
 Secure your laravel API with Google Firebase Auth
 
