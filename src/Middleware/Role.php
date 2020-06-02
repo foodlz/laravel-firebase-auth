@@ -4,7 +4,7 @@ namespace sdwru\LaravelFirebaseAuth\Middleware;
 
 use Closure;
 
-class RoleMiddleware
+class Role
 {
 
     public function handle($request, Closure $next, ...$roles)
