@@ -10,7 +10,7 @@ This package includes optional role middleware for more granular access.
 
 ## Install
 ```bash
-composer require sdwru/laravel-firebase-auth
+composer require sdwru/laravel-firebase-auth-plus
 ```
 #### laravel-firebase
 Publish the laravel-firebase ServiceProvider (`Provider: Kreait\Laravel\Firebase\ServiceProvider`) if not already done so.
