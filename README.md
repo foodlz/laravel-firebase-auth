@@ -154,7 +154,6 @@ class UserController extends Controller
   {
       $users = $this->auth->listUsers($defaultMaxResults = 1000, $defaultBatchSize = 1000);
  
-      $i = 0;
       foreach ($users as $k => $v) {
           $response[$k] = $v;
       }
