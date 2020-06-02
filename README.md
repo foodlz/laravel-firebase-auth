@@ -168,7 +168,7 @@ class UserController extends Controller
        ]);
        
        $customAttributes = [
-         'role' => $request['role'],
+         'role' => $request->role,
        ];
        
        $updatedUser = $this->auth->setCustomUserAttributes($uid, $customAttributes);
