@@ -127,7 +127,7 @@ protected $routeMiddleware = [
 ...
 ...
 
-'role' => \sdwru\LaravelFirebaseAuth\Middleware\RoleMiddleware::class,
+'role' => \sdwru\LaravelFirebaseAuth\Middleware\Role::class,
 
 ];
 ```
