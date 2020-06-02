@@ -1,6 +1,6 @@
 {
-    "name": "sdwru/laravel-firebase-auth",
-    "description": "Secure your laravel API with Google Firebase Auth",
+    "name": "sdwru/laravel-firebase-auth-plus",
+    "description": "Secure your laravel API with Google Firebase Auth and also get a full Firebase Admin SDK",
     "license": "MIT",
     "type": "library",
     "authors": [
