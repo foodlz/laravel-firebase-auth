@@ -25,7 +25,7 @@ Those instructions make it sound more complicated than it is.  All we need to do
 
 1. In the Firebase console, open Settings > Service Accounts.
 2. Click Generate New Private Key, then confirm by clicking Generate Key.
-3. Securely store the JSON file containing the key somewhere on your server, such as your root laravel directory, and add a reference to that file in your laravel `.env` file
+3. Securely store the resulting JSON file and add a reference to that file in your laravel `.env` file.  The following example assumes we are storing the file in the root folder of our laravel installation.
 ```bash
 FIREBASE_CREDENTIALS=myproject-firebase-adminsdk.json
 ```
