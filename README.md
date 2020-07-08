@@ -94,7 +94,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->apiResource('some_endpoint', 'API\SomeEndpointController');
 ```
-#### Example: Retrieve uid (For method #2 only)
+#### Example: Retrieve uid (For method #2 only) from API UserController
 
 ```php
 <?php
@@ -120,6 +120,26 @@ class UserController extends Controller
         // Do something with the request for this user
     }
 }
+```
+#### Example: Retrieve uid (For method #2 only) from almost anywhere inside Laravel
+```
+class SomeClass
+{
+  public function bar()
+  {
+     //Check if logged in and retrieve user object and uid from Auth Facade
+     $isLoggedIn = \Illuminate\Support\Facades\Auth::guard('api')->check();
+     $userObject = \Illuminate\Support\Facades\Auth::guard('api')->user();
+     $uid = \Illuminate\Support\Facades\Auth::guard('api')->user();
+     
+     //Or with helper
+     $isLoggedIn = auth('api')->check();
+     $userObject = auth('api')->user();
+     $uid = auth('api')->id();
+     
+  }
+}
+
 ```
 ### Role Middleware
 To use this optional feature add the following to `app/Http/Kernel.php`.
