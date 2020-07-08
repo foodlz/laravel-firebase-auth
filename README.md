@@ -110,7 +110,7 @@ class UserController extends Controller
         
         // Retrieve Firebase uid from id token via request
         $user = $request->user();
-        $uid = $user->getAuthIdentifier()
+        $uid = $user->getAuthIdentifier();
         
         // Or, do the same thing using guard instead
         $user = $guard->user();
