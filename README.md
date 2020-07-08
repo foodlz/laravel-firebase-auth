@@ -123,14 +123,17 @@ class UserController extends Controller
 ```
 #### Example: Check if logged in and retrieve firebase user object and uid (For method #2 only) from almost anywhere else inside Laravel
 ```php
+
+use Illuminate\Support\Facades\Auth;
+
 class SomeClass
 {
   public function bar()
   {
      //Check if logged in and retrieve user object and uid using Auth Facade
-     $isLoggedIn = \Illuminate\Support\Facades\Auth::guard('api')->check();
-     $userObject = \Illuminate\Support\Facades\Auth::guard('api')->user();
-     $uid = \Illuminate\Support\Facades\Auth::guard('api')->user();
+     $isLoggedIn = Auth::guard('api')->check();
+     $userObject = Auth::guard('api')->user();
+     $uid = Auth::guard('api')->user();
      
      //Alternatively, use auth() helper
      $isLoggedIn = auth('api')->check();
