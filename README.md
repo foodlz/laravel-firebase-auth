@@ -122,7 +122,7 @@ class UserController extends Controller
 }
 ```
 #### Example: Retrieve uid (For method #2 only) from almost anywhere else inside Laravel
-```
+```php
 class SomeClass
 {
   public function bar()
