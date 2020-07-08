@@ -121,18 +121,18 @@ class UserController extends Controller
     }
 }
 ```
-#### Example: Retrieve uid (For method #2 only) from almost anywhere else inside Laravel
+#### Example: Check if logged in and retrieve firebase user object and uid (For method #2 only) from almost anywhere else inside Laravel
 ```php
 class SomeClass
 {
   public function bar()
   {
-     //Check if logged in and retrieve user object and uid from Auth Facade
+     //Check if logged in and retrieve user object and uid using Auth Facade
      $isLoggedIn = \Illuminate\Support\Facades\Auth::guard('api')->check();
      $userObject = \Illuminate\Support\Facades\Auth::guard('api')->user();
      $uid = \Illuminate\Support\Facades\Auth::guard('api')->user();
      
-     //Or with helper
+     //Alternatively, use auth() helper
      $isLoggedIn = auth('api')->check();
      $userObject = auth('api')->user();
      $uid = auth('api')->id();
