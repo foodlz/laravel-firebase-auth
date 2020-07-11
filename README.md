@@ -133,7 +133,7 @@ class SomeClass
      //Check if logged in and retrieve user object and uid using Auth Facade
      $isLoggedIn = Auth::guard('api')->check();
      $userObject = Auth::guard('api')->user();
-     $uid = Auth::guard('api')->user();
+     $uid = Auth::guard('api')->id();
      
      //Alternatively, use auth() helper
      $isLoggedIn = auth('api')->check();
