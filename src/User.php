@@ -3,9 +3,11 @@
 namespace sdwru\LaravelFirebaseAuth;
 
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User implements Authenticatable
 {
+    use Notifiable;
     /**
      * The claims decoded from the JWT token.
      *
