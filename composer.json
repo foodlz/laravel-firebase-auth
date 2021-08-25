@@ -1,5 +1,5 @@
 {
-    "name": "sdwru/laravel-firebase-auth-plus",
+    "name": "foodlz/laravel-firebase-api-auth",
     "description": "Secure your laravel API with Google Firebase Auth and also get a full Firebase Admin SDK",
     "license": "MIT",
     "type": "library",
