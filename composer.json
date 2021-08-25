@@ -5,8 +5,8 @@
     "type": "library",
     "authors": [
         {
-            "name": "sdwru",
-            "homepage": "http://github.com/sdwur",
+            "name": "foodlz",
+            "homepage": "http://github.com/foodlz",
             "role"    : "Developer"
         }
     ],
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "sdwru\\LaravelFirebaseAuth\\": "src/"
+            "foodlz\\LaravelFirebaseAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "sdwru\\LaravelFirebaseAuth\\Test\\": "tests/"
+            "foodlz\\LaravelFirebaseAuth\\Test\\": "tests/"
         }
     }
 }
